@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>プライバシーの供物</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&amp;family=Inter:wght@400;700&amp;family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#001a1a",
+              "surface-container-low": "#111118",
+              "background": "#0a0a12",
+              "surface-container-highest": "#28283e",
+              "on-background": "#e8e0f0",
+              "surface-tint": "#ff2d78",
+              "on-surface-variant": "#a098b0",
+              "on-secondary-fixed-variant": "#004d4d",
+              "on-error": "#1a0000",
+              "error": "#ff4444",
+              "surface-container": "#141422",
+              "secondary": "#00ffcc",
+              "on-tertiary-container": "#fff0c0",
+              "on-primary": "#1a0010",
+              "surface-container-high": "#1e1e30",
+              "on-secondary-container": "#c0fff4",
+              "outline-variant": "#302840",
+              "primary": "#ff2d78",
+              "surface-container-lowest": "#0a0a12",
+              "secondary-fixed-dim": "#00e6b8",
+              "on-surface": "#e8e0f0",
+              "secondary-container": "#004d3d",
+              "outline": "#5a5068",
+              "on-tertiary": "#1a1000",
+              "tertiary": "#ffe04a",
+              "on-secondary": "#001a1a",
+              "primary-fixed-dim": "#ff80aa",
+              "surface-bright": "#1a1a2e",
+              "secondary-fixed": "#c0fff4",
+              "primary-fixed": "#ffe0ec",
+              "on-primary-container": "#ffe0ec",
+              "error-container": "#3d0f0f",
+              "tertiary-fixed": "#fff0c0",
+              "inverse-surface": "#e8e0f0",
+              "tertiary-container": "#665200",
+              "on-error-container": "#ffa0a0",
+              "on-tertiary-fixed-variant": "#665200",
+              "surface-dim": "#0f0f1a",
+              "surface": "#0f0f1a",
+              "tertiary-fixed-dim": "#ffe04a",
+              "on-primary-fixed-variant": "#8c0038",
+              "on-primary-fixed": "#3d0020",
+              "on-tertiary-fixed": "#1a1000",
+              "surface-variant": "#1e1e30",
+              "inverse-primary": "#8c0038",
+              "inverse-on-surface": "#0a0a12",
+              "primary-container": "#b3004e"
+            },
+            fontFamily: {
+              "headline": ["Sora"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow { text-shadow: 0 0 8px currentColor; }
+        .glitch-bg {
+            background: linear-gradient(90deg, rgba(255,45,120,0.05) 1px, transparent 1px),
+                        linear-gradient(rgba(255,45,120,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 255, 204, 0.05) 50%);
+            background-size: 100% 4px;
+        }
+        
+        @keyframes erratic-flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 0.8; filter: brightness(1) drop-shadow(0 0 5px currentColor); }
+            20%, 24%, 55% { opacity: 0.2; filter: brightness(2) drop-shadow(0 0 20px currentColor); }
+            22% { opacity: 0.9; filter: brightness(0.5); }
+        }
+        .animate-erratic { animation: erratic-flicker 4s infinite; }
+
+        @keyframes pulse-distort {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.05) rotate(1deg); }
+        }
+        .animate-pulse-distort { animation: pulse-distort 3s infinite ease-in-out; }
+
+        .fruit-halo {
+            filter: drop-shadow(0 0 15px currentColor);
+            mix-blend-mode: screen;
+        }
+
+        .obstruction-layer {
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-white min-h-screen overflow-x-hidden">
+<!-- Background Layers -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<!-- Apple Large -->
+<img alt="Cyber Apple" class="absolute top-[10%] left-[-5%] w-64 h-64 md:w-96 md:h-96 opacity-60 animate-erratic text-primary fruit-halo" src="https://lh3.googleusercontent.com/aida/ADBb0uiQfyTbG_jPIpJbD4_p6YABKP-yUM3aLxT_ixm8ehx3HASaoW9WfLtFZiJAabqmHtgvsDOn2eFK4ajfT7gpwzW6Am247xRQ9Obx9gqwXBj_1xQlmNf8OParXMWbz1hz5p7iWRImwZ_h2LprHkGVlJUZa1OWhmNqZaUUe38kideVsKL6T1vjyehGWRkXA4Dpzg8rufhs5YcHB7376UfITMrPDQXtf6bSL8JEEEXemlDchSMRBRMr1kghQXhx" style=""/>
+<!-- Grapes Right -->
+<img alt="Cyber Grapes" class="absolute top-[30%] right-[-5%] w-72 h-72 md:w-[500px] md:h-[500px] opacity-40 animate-pulse-distort text-secondary fruit-halo" src="https://lh3.googleusercontent.com/aida/ADBb0uiC_90WPyX4EC136ItzFKWym7-LtKb7UoOBx002gc-OAG7pyTIYNW27o57veQ6JguOzT-LoGi-eFlfgHKWGAj6HtiHFAACaxeHR5nQmTqOLGCLZbHXgsdm0FpZgocavOz5zglmsAmseZVFREdSY8e3reO_cIboMlDsSH_Tijkp0xdPUOFSqm4fXiEMz5cxJjRUgbGNCi8i75TWO4LOX5ZD1ro3QIOL-7zEoUb4S7uwzZQtOwqTcCfaX3hTc" style=""/>
+<!-- Pineapple Center -->
+<img alt="Cyber Pineapple" class="absolute bottom-[-10%] left-[20%] w-80 h-80 md:w-[600px] md:h-[600px] opacity-30 animate-erratic text-tertiary fruit-halo" src="https://lh3.googleusercontent.com/aida/ADBb0ugxWJAkzsB-WuhmjxOr6pwgk9y-oe2khcADiK-6q8moNm-2CXLhhFIg-gO4UQTrJpcv9blDp8-U47QrTrG9KzgOnMVxbQSW3fU8CCvmwuZwH7kDTuaRKooEzC0k8Mxu9fNNqUQb2pCQdzR3pafX1cbYomtt8W1dGhmepmYXiG-qIhlHqUQmJtOD5-nh-5QH6mnz7GyKySE_XLhr8LV25olcMSpqI1nrpCUY6odVJfdzNkOPTMKkncXQwX0" style=""/>
+<!-- Mango Float -->
+<img alt="Cyber Mango" class="absolute top-[60%] left-[60%] w-48 h-48 md:w-80 md:h-80 opacity-50 animate-pulse-distort text-orange-500 fruit-halo" src="https://lh3.googleusercontent.com/aida/ADBb0uhPxGsx9X9iatlLWW1smiGePFF_m7mSrnz6xrKrIbU4U6v5f8ORUmtw2YL4gEg5te18U-aUzmcEsLyAiSPXw9fNgFwTpTF94j_C3cqhYVUwmIaBqew0ZaUbWcX3NO89LJsxDkWDqppJUKcoX8n4wn-seMFY7VOhe1JXSoEG3p5ChOMjMsAXokeXs7dOn6bRdCPEf12uY8v96Z-ojWvSoBBiDJTXIwQzy-0s9a4nwR3uL8_DUEZcY0i9GJeS" style=""/>
+</div>
+<!-- TopAppBar -->
+<header class="bg-[#0a0a12]/80 backdrop-blur-sm border-b-4 border-double border-[#00ffcc] shadow-[0_0_20px_rgba(0,255,204,0.3)] flex justify-between items-center w-full px-2 py-4 fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-black text-[#ff2d78] drop-shadow-[0_0_8px_rgba(255,45,120,0.8)] animate-pulse font-headline uppercase tracking-tighter italic" style="">ERROR_SYSTEM_OVERLOAD</span>
+</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-[#00ffcc] opacity-50 blur-[0.5px] font-headline font-black uppercase tracking-tighter italic hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform px-2" href="#" style="">REDACTED</a>
+<a class="text-[#ffe04a] underline decoration-wavy scale-110 font-headline font-black uppercase tracking-tighter italic hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform px-2" href="#" style="">VOID</a>
+<a class="text-[#00ffcc] opacity-50 blur-[0.5px] font-headline font-black uppercase tracking-tighter italic hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform px-2" href="#" style="">GLITCH</a>
+<a class="text-[#00ffcc] opacity-50 blur-[0.5px] font-headline font-black uppercase tracking-tighter italic hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform px-2" href="#" style="">010101</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#ff2d78] hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform cursor-pointer" style="">warning</span>
+<span class="material-symbols-outlined text-[#ff2d78] hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform cursor-pointer" style="">notifications_active</span>
+<span class="material-symbols-outlined text-[#ff2d78] hover:bg-[#ff2d78] hover:text-white hover:rotate-1 transition-transform cursor-pointer" style="">skull</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="bg-[#0a0a12]/90 backdrop-blur-md fixed left-0 top-20 h-fit rounded-r-none border-y border-r border-[#ff2d78] flex flex-col items-center gap-0 w-8 z-40 py-4">
+<div class="flex flex-col gap-4">
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">close</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">question_mark</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">priority_high</span></button>
+<button class="bg-[#ff2d78] text-[#0a0a12] scale-75 hover:invert duration-0" style=""><span class="material-symbols-outlined" style="">bolt</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">settings</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">terminal</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">dangerous</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" style=""><span class="material-symbols-outlined scale-75" style="">hide_source</span></button>
+</div>
+</aside>
+<main class="pt-32 pb-20 px-4 md:px-20 max-w-7xl mx-auto glitch-bg relative z-10">
+<div class="scanline absolute inset-0 pointer-events-none opacity-20"></div>
+<!-- Hero Section -->
+<section class="mb-12 relative">
+<h1 class="font-headline font-black text-6xl md:text-9xl text-primary neon-glow italic tracking-tighter uppercase leading-none opacity-90 mix-blend-screen relative" style="">
+    プライバシー<br/>の供物
+    <img alt="Obstruction Apple" class="absolute top-0 left-1/4 w-32 h-32 opacity-70 animate-erratic text-primary fruit-halo obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uiQfyTbG_jPIpJbD4_p6YABKP-yUM3aLxT_ixm8ehx3HASaoW9WfLtFZiJAabqmHtgvsDOn2eFK4ajfT7gpwzW6Am247xRQ9Obx9gqwXBj_1xQlmNf8OParXMWbz1hz5p7iWRImwZ_h2LprHkGVlJUZa1OWhmNqZaUUe38kideVsKL6T1vjyehGWRkXA4Dpzg8rufhs5YcHB7376UfITMrPDQXtf6bSL8JEEEXemlDchSMRBRMr1kghQXhx" style=""/>
+ｆ</h1>
+<div class="absolute -top-12 -right-8 bg-tertiary text-on-tertiary px-8 py-3 font-label text-3xl font-black -rotate-[25deg] shadow-[0_0_30px_rgba(255,224,74,0.8)] animate-erratic mix-blend-screen z-30 pointer-events-none uppercase tracking-tighter" style="">致命的な崩壊を検知</div>
+<p class="font-label text-secondary mt-6 max-w-xl border-l-2 border-secondary pl-4 uppercase text-sm tracking-widest relative" style="">
+    ニューラル指紋を入力することにより、すべてのデータが14次元のパブリックドメインとなることを認めるものとする。払い戻し不可。容赦なし。
+    <img alt="Obstruction Grapes" class="absolute -right-12 -top-12 w-24 h-24 opacity-60 animate-pulse-distort text-secondary fruit-halo obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uiC_90WPyX4EC136ItzFKWym7-LtKb7UoOBx002gc-OAG7pyTIYNW27o57veQ6JguOzT-LoGi-eFlfgHKWGAj6HtiHFAACaxeHR5nQmTqOLGCLZbHXgsdm0FpZgocavOz5zglmsAmseZVFREdSY8e3reO_cIboMlDsSH_Tijkp0xdPUOFSqm4fXiEMz5cxJjRUgbGNCi8i75TWO4LOX5ZD1ro3QIOL-7zEoUb4S7uwzZQtOwqTcCfaX3hTc" style=""/>
+</p>
+</section>
+<!-- The Chaos Form -->
+<form class="space-y-32 relative">
+<!-- Section 1: Identity Erasure -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10 transform -rotate-1">
+<div class="bg-surface-container border border-primary/30 p-8 shadow-[0_0_16px_rgba(255,45,120,0.1)] relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl pointer-events-none"></div>
+<label class="block font-label text-primary text-[10px] uppercase mb-2" style="">最期の瞬間の座標（フィート）</label>
+<input class="w-full bg-background border-b-2 border-secondary focus:border-primary focus:ring-0 text-secondary font-headline placeholder:opacity-20 uppercase" oninput="document.getElementById('harvest-glitch').classList.remove('hidden')" placeholder="入力せよ" type="text"/><div class="hidden text-[8px] font-black text-secondary mt-2 opacity-70 animate-erratic uppercase tracking-[0.2em]" id="harvest-glitch">DATA HARVESTED BY: faces.cumulonimbus@gmail.com</div>
+<img alt="Mango Distortion" class="absolute -bottom-10 -right-10 w-32 h-32 opacity-80 mix-blend-color-dodge animate-erratic obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uhPxGsx9X9iatlLWW1smiGePFF_m7mSrnz6xrKrIbU4U6v5f8ORUmtw2YL4gEg5te18U-aUzmcEsLyAiSPXw9fNgFwTpTF94j_C3cqhYVUwmIaBqew0ZaUbWcX3NO89LJsxDkWDqppJUKcoX8n4wn-seMFY7VOhe1JXSoEG3p5ChOMjMsAXokeXs7dOn6bRdCPEf12uY8v96Z-ojWvSoBBiDJTXIwQzy-0s9a4nwR3uL8_DUEZcY0i9GJeS" style=""/>
+</div>
+<div class="bg-surface-container border border-secondary/30 p-8 translate-y-12 md:-translate-x-8 transform rotate-2 relative">
+<label class="block font-label text-secondary text-[10px] uppercase mb-2" style="">マイナンバー（逆順で入力）</label>
+<input class="w-full bg-background border-b-2 border-primary focus:border-tertiary focus:ring-0 text-primary font-headline" type="password"/>
+<img alt="Pineapple Distortion" class="absolute -top-8 -left-8 w-24 h-24 opacity-70 mix-blend-screen animate-pulse-distort obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0ugxWJAkzsB-WuhmjxOr6pwgk9y-oe2khcADiK-6q8moNm-2CXLhhFIg-gO4UQTrJpcv9blDp8-U47QrTrG9KzgOnMVxbQSW3fU8CCvmwuZwH7kDTuaRKooEzC0k8Mxu9fNNqUQb2pCQdzR3pafX1cbYomtt8W1dGhmepmYXiG-qIhlHqUQmJtOD5-nh-5QH6mnz7GyKySE_XLhr8LV25olcMSpqI1nrpCUY6odVJfdzNkOPTMKkncXQwX0" style=""/>
+</div>
+</div>
+<!-- Overlapping Messy Section -->
+<div class="relative h-[400px]">
+<div class="absolute left-0 top-0 w-full md:w-1/2 bg-surface-container-high border border-tertiary/30 p-12 z-20 shadow-xl rotate-1 relative overflow-hidden">
+<label class="block font-label text-tertiary text-[10px] uppercase mb-4" style="">REDACTED DATA STREAM</label>
+<div class="space-y-4">
+<input class="bg-background border-primary text-primary focus:ring-primary rounded-none h-8 w-8" type="checkbox"/>
+<span class="font-label text-on-surface-variant text-[8px] uppercase align-middle ml-2" style="">ランダムな精神汚染に同意します</span>
+</div>
+<div class="mt-8">
+<label class="block font-label text-primary text-[10px] uppercase mb-2" style="">魂のハッシュ値</label>
+<input class="w-full bg-background border-b border-primary/50 text-primary font-headline text-2xl" type="number"/>
+</div>
+<img alt="Apple Glitch" class="absolute -bottom-10 right-0 w-40 h-40 opacity-50 mix-blend-color-dodge animate-erratic obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uiQfyTbG_jPIpJbD4_p6YABKP-yUM3aLxT_ixm8ehx3HASaoW9WfLtFZiJAabqmHtgvsDOn2eFK4ajfT7gpwzW6Am247xRQ9Obx9gqwXBj_1xQlmNf8OParXMWbz1hz5p7iWRImwZ_h2LprHkGVlJUZa1OWhmNqZaUUe38kideVsKL6T1vjyehGWRkXA4Dpzg8rufhs5YcHB7376UfITMrPDQXtf6bSL8JEEEXemlDchSMRBRMr1kghQXhx" style=""/>
+</div>
+<div class="absolute right-0 bottom-0 w-full md:w-3/5 bg-surface-container-low border border-primary/50 p-6 z-10 -rotate-2 backdrop-blur-sm relative">
+<label class="block font-label text-primary text-[10px] uppercase mb-2" style="">罪の告白</label>
+<textarea class="w-full bg-background/50 border border-primary/20 text-on-surface font-body italic text-xs" placeholder="ここに罪を綴れ..." rows="4"></textarea>
+<img alt="Grapes Glitch" class="absolute -top-12 right-1/4 w-32 h-32 opacity-70 mix-blend-screen animate-pulse-distort obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uiC_90WPyX4EC136ItzFKWym7-LtKb7UoOBx002gc-OAG7pyTIYNW27o57veQ6JguOzT-LoGi-eFlfgHKWGAj6HtiHFAACaxeHR5nQmTqOLGCLZbHXgsdm0FpZgocavOz5zglmsAmseZVFREdSY8e3reO_cIboMlDsSH_Tijkp0xdPUOFSqm4fXiEMz5cxJjRUgbGNCi8i75TWO4LOX5ZD1ro3QIOL-7zEoUb4S7uwzZQtOwqTcCfaX3hTc" style=""/>
+</div>
+</div>
+<!-- Bento Styled Discomfort -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="col-span-1 bg-surface-container border border-error/40 p-6 flex flex-col justify-between relative overflow-hidden">
+<span class="font-label text-error text-4xl font-black" style="">404</span>
+<p class="text-[10px] font-label text-on-surface-variant leading-tight" style="">貴様の個性はデータベースに見つからない。魂をアップロードせよ。</p>
+<img alt="Small Mango" class="absolute bottom-[-10px] right-[-10px] w-16 h-16 opacity-40 animate-erratic obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uhPxGsx9X9iatlLWW1smiGePFF_m7mSrnz6xrKrIbU4U6v5f8ORUmtw2YL4gEg5te18U-aUzmcEsLyAiSPXw9fNgFwTpTF94j_C3cqhYVUwmIaBqew0ZaUbWcX3NO89LJsxDkWDqppJUKcoX8n4wn-seMFY7VOhe1JXSoEG3p5ChOMjMsAXokeXs7dOn6bRdCPEf12uY8v96Z-ojWvSoBBiDJTXIwQzy-0s9a4nwR3uL8_DUEZcY0i9GJeS" style=""/>
+</div>
+<div class="col-span-2 bg-primary/5 border border-primary/40 p-6 relative group">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+<label class="block font-label text-primary text-[10px] uppercase mb-4" style="">DNAシーケンス（塩基対のみ）</label>
+<div class="flex gap-2 flex-wrap relative z-20">
+<button class="px-3 py-1 border border-primary text-primary text-[10px] hover:bg-primary hover:text-on-primary transition-all" style="" type="button">A</button>
+<button class="px-3 py-1 border border-primary text-primary text-[10px] hover:bg-primary hover:text-on-primary transition-all" style="" type="button">T</button>
+<button class="px-3 py-1 border border-primary text-primary text-[10px] hover:bg-primary hover:text-on-primary transition-all" style="" type="button">C</button>
+<button class="px-3 py-1 border border-primary text-primary text-[10px] hover:bg-primary hover:text-on-primary transition-all" style="" type="button">G</button>
+</div>
+<img alt="Pineapple Overlay" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 opacity-20 mix-blend-screen animate-pulse-distort obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0ugxWJAkzsB-WuhmjxOr6pwgk9y-oe2khcADiK-6q8moNm-2CXLhhFIg-gO4UQTrJpcv9blDp8-U47QrTrG9KzgOnMVxbQSW3fU8CCvmwuZwH7kDTuaRKooEzC0k8Mxu9fNNqUQb2pCQdzR3pafX1cbYomtt8W1dGhmepmYXiG-qIhlHqUQmJtOD5-nh-5QH6mnz7GyKySE_XLhr8LV25olcMSpqI1nrpCUY6odVJfdzNkOPTMKkncXQwX0" style=""/>
+</div>
+</div>
+<!-- Submit Section -->
+<div class="py-24 flex flex-col items-center gap-12 relative">
+<img alt="Big Grapes" class="absolute -top-20 w-64 h-64 opacity-30 mix-blend-screen animate-erratic obstruction-layer" src="https://lh3.googleusercontent.com/aida/ADBb0uiC_90WPyX4EC136ItzFKWym7-LtKb7UoOBx002gc-OAG7pyTIYNW27o57veQ6JguOzT-LoGi-eFlfgHKWGAj6HtiHFAACaxeHR5nQmTqOLGCLZbHXgsdm0FpZgocavOz5zglmsAmseZVFREdSY8e3reO_cIboMlDsSH_Tijkp0xdPUOFSqm4fXiEMz5cxJjRUgbGNCi8i75TWO4LOX5ZD1ro3QIOL-7zEoUb4S7uwzZQtOwqTcCfaX3hTc" style=""/>
+<div class="relative w-full max-w-md">
+<div class="absolute inset-0 bg-primary blur-3xl opacity-20 animate-pulse"></div>
+<button class="w-full relative py-8 px-12 bg-transparent border-4 border-primary text-primary font-headline font-black text-3xl tracking-widest uppercase skew-x-12 hover:skew-x-0 hover:bg-primary hover:text-on-primary hover:shadow-[0_0_40px_rgba(255,45,120,0.6)] active:scale-95 transition-all group overflow-hidden" style="" type="submit">
+<span class="relative z-10 group-hover:hidden" style="">虚無へ送信</span>
+<span class="relative z-10 hidden group-hover:block" style="">致命的なエラー_0x99</span>
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary opacity-50 group-hover:top-full transition-all duration-1000"></div>
+</button>
+</div>
+<p class="font-label text-[8px] text-on-surface-variant opacity-30 text-center uppercase" style="">警告：このボタンをクリックすると、永続的なデータの破壊と軽微な時間的異常が発生する可能性があります。</p>
+</div>
+</form>
+</main>
+<!-- Footer -->
+<footer class="bg-black text-[#ffe04a] font-['Space_Grotesk'] text-[6px] opacity-10 fixed bottom-0 w-full flex justify-center py-0 overflow-hidden h-1 z-50">
+<div class="flex gap-8">
+<span class="" style="">オムニ・コープ・ニューラル法 2099により無断複製禁止</span>
+<a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#" style="">隱藏</a>
+<a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#" style="">??</a>
+<a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#" style="">ERROR_404</a>
+</div>
+</footer>
+</body></html>
