@@ -243,12 +243,17 @@
 </div>
 </form>
 </main>
+<!-- 監視ステータス表示 -->
+<div class="fixed bottom-8 left-4 z-50 flex flex-col gap-1 pointer-events-none">
+  <div id="timer-display" class="text-[#00ffcc] font-label text-[10px] uppercase tracking-widest bg-black/70 px-2 py-1"></div>
+  <div id="scroll-display" class="text-[#ff2d78] font-label text-[10px] uppercase tracking-widest bg-black/70 px-2 py-1"></div>
+</div>
 <!-- Footer -->
 <footer class="bg-black/90 text-[#ffe04a] font-label text-[11px] fixed bottom-0 w-full flex justify-center items-center gap-6 py-1 h-6 z-50 border-t border-[#ffe04a]/20">
 <div class="flex gap-8">
 <span class="">オムニ・コープ・ニューラル法 2099により無断複製禁止</span>
-<span id="timer-display" class="text-[#00ffcc]"></span>
-<span id="scroll-display" class="text-[#ff2d78]"></span>
+<span id="timer-display" class="hidden"></span>
+<span id="scroll-display" class="hidden"></span>
 <a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#">隱藏</a>
 <a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#">??</a>
 <a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#">ERROR_404</a>
