@@ -311,11 +311,15 @@ document.addEventListener('mousemove', () => {
 
 // ④ 離脱阻止（マウスがウィンドウ外に出た瞬間）
 let exitShown = false;
+let exitCount = 0;
 document.addEventListener('mouseleave', (e) => {
   if (e.clientY <= 0 && !exitShown) {
     exitShown = true;
+    exitCount++;
     document.getElementById('exit-modal').classList.remove('hidden');
-    setTimeout(() => { exitShown = false; }, 600000);
+    const delay = exitCount === 1 ? 180000 : 300000;
+    setTimeout(() => { exitShown = false; }, delay);
+  }
   }
 });
 
