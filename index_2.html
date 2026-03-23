@@ -416,16 +416,16 @@
         <textarea id="mail-body" rows="4" class="w-full bg-background border border-primary/20 text-on-surface font-body text-xs p-2 mt-1 focus:outline-none focus:border-primary resize-none">ニューラル指紋の送信が完了しました。14次元パブリックドメインへの統合を承認します。払い戻し不可。容赦なし。</textarea>
       </div>
     </div>
-    <button onclick="sendMail()" class="w-full py-3 bg-primary text-on-primary font-headline font-black uppercase tracking-widest hover:shadow-[0_0_20px_rgba(255,45,120,0.8)] hover:scale-105 transition-all active:scale-95">メーラーを起動して送信</button>
+    <a id="mail-send-btn" href="#" onclick="buildMailto(event)" class="block w-full py-3 bg-primary text-on-primary font-headline font-black uppercase tracking-widest text-center hover:shadow-[0_0_20px_rgba(255,45,120,0.8)] hover:scale-105 transition-all active:scale-95 cursor-pointer">メーラーを起動して送信</a>
     <p class="text-[8px] text-on-surface-variant/40 uppercase text-center mt-3">※あなたのデフォルトメールアプリが起動します</p>
   </div>
 </div>
 
 <script>
-function sendMail() {
+function buildMailto(e) {
   const subject = encodeURIComponent(document.getElementById('mail-subject').value);
   const body = encodeURIComponent(document.getElementById('mail-body').value);
-  window.location.href = 'mailto:faces.cumulonimbus@gmail.com?subject=' + subject + '&body=' + body;
+  e.currentTarget.href = 'mailto:faces.cumulonimbus@gmail.com?subject=' + subject + '&body=' + body;
   document.getElementById('mailer-modal').classList.add('hidden');
 }
 </script>
