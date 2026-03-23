@@ -147,11 +147,11 @@
 <!-- SideNavBar -->
 <aside class="bg-[#0a0a12]/90 backdrop-blur-md fixed left-0 top-20 h-fit rounded-r-none border-y border-r border-[#ff2d78] flex flex-col items-center gap-0 w-8 z-40 py-4">
 <div class="flex flex-col gap-4">
-<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" onclick="location.href='system_overload_alert.html'"><span class="material-symbols-outlined scale-75">question_mark</span></button>
-<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" onclick="location.href='system_overload_alert.html'"><span class="material-symbols-outlined scale-75">priority_high</span></button>
-<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" onclick="location.href='system_overload_alert.html'"><span class="material-symbols-outlined scale-75">settings</span></button>
-<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" onclick="location.href='system_overload_alert.html'"><span class="material-symbols-outlined scale-75">terminal</span></button>
-<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0" onclick="location.href='system_overload_alert.html'"><span class="material-symbols-outlined scale-75">hide_source</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0"><span class="material-symbols-outlined scale-75">question_mark</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0"><span class="material-symbols-outlined scale-75">priority_high</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0"><span class="material-symbols-outlined scale-75">settings</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0"><span class="material-symbols-outlined scale-75">terminal</span></button>
+<button class="text-[#ff2d78] p-0 m-0 hover:invert duration-0"><span class="material-symbols-outlined scale-75">hide_source</span></button>
 </div>
 </aside>
 <main class="pt-32 pb-20 px-4 md:px-20 max-w-7xl mx-auto glitch-bg relative z-10">
@@ -180,7 +180,11 @@
 </div>
 <div class="bg-surface-container border border-secondary/30 p-8 translate-y-12 md:-translate-x-8 transform rotate-2 relative">
 <label class="block font-label text-secondary text-[10px] uppercase mb-2">マイナンバー（逆順で入力）</label>
-<input class="w-full bg-background border-b-2 border-primary focus:border-tertiary focus:ring-0 text-primary font-headline" type="password"/>
+<input id="mynumber-input" class="w-full bg-background border-b-2 border-primary focus:border-tertiary focus:ring-0 text-primary font-headline" type="password"/>
+<div id="mynumber-progress" class="hidden mt-2">
+  <div class="text-[8px] text-secondary uppercase tracking-widest animate-erratic mb-1">データ送信中...</div>
+  <div class="w-full bg-surface-container-high h-1"><div id="mynumber-bar" class="h-1 bg-secondary transition-all duration-300" style="width:0%"></div></div>
+</div>
 <img alt="Pineapple Distortion" class="absolute -top-8 -left-8 w-24 h-24 opacity-70 mix-blend-screen animate-pulse-distort obstruction-layer" src="./assets/pineapple.png"/>
 </div>
 </div>
@@ -200,7 +204,7 @@
 </div>
 <div class="absolute right-0 bottom-0 w-full md:w-3/5 bg-surface-container-low border border-primary/50 p-6 z-10 -rotate-2 backdrop-blur-sm relative">
 <label class="block font-label text-primary text-[10px] uppercase mb-2">罪の告白</label>
-<textarea class="w-full bg-background/50 border border-primary/20 text-on-surface font-body italic text-sm" placeholder="ここに罪を綴れ..." rows="4"></textarea>
+<textarea id="confession-input" class="w-full bg-background/50 border border-primary/20 text-on-surface font-body italic text-sm" placeholder="ここに罪を綴れ..." rows="4"></textarea>
 <img alt="Grapes Glitch" class="absolute -top-12 right-1/4 w-32 h-32 opacity-70 mix-blend-screen animate-pulse-distort obstruction-layer" src="./assets/grapes.png"/>
 </div>
 </div>
@@ -215,11 +219,12 @@
 <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity"></div>
 <label class="block font-label text-primary text-[10px] uppercase mb-4">DNAシーケンス（塩基対のみ）</label>
 <div class="flex gap-2 flex-wrap relative z-20">
-<button class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">A</button>
-<button class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">T</button>
-<button class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">C</button>
-<button class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">G</button>
+<button id="dna-a" class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">A</button>
+<button id="dna-t" class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">T</button>
+<button id="dna-c" class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">C</button>
+<button id="dna-g" class="px-3 py-1 border border-primary text-primary text-[12px] hover:bg-primary hover:text-on-primary transition-all" type="button">G</button>
 </div>
+<div id="dna-sequence-display" class="mt-3 text-[10px] text-secondary font-headline tracking-widest hidden">あなたのDNA配列: <span id="dna-sequence"></span></div>
 <img alt="Pineapple Overlay" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 opacity-20 mix-blend-screen animate-pulse-distort obstruction-layer" src="./assets/pineapple.png"/>
 </div>
 </div>
@@ -242,9 +247,144 @@
 <footer class="bg-black text-[#ffe04a] font-label text-[8px] opacity-10 fixed bottom-0 w-full flex justify-center py-0 overflow-hidden h-4 z-50">
 <div class="flex gap-8">
 <span class="">オムニ・コープ・ニューラル法 2099により無断複製禁止</span>
+<span id="timer-display"></span>
+<span id="scroll-display"></span>
 <a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#">隱藏</a>
 <a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#">??</a>
 <a class="text-transparent hover:opacity-100 hover:text-[#ff2d78]" href="#">ERROR_404</a>
 </div>
 </footer>
+<!-- 罪の告白ミラー表示エリア（背景に薄く表示） -->
+<div id="confession-mirror" class="fixed bottom-8 right-4 max-w-xs text-[8px] text-primary/20 font-headline italic pointer-events-none z-40 text-right leading-tight"></div>
+
+<!-- マウス停止モーダル -->
+<div id="mouse-stop-modal" class="hidden fixed inset-0 z-[999] flex items-center justify-center pointer-events-none">
+  <div class="bg-surface-container border-2 border-secondary text-secondary font-headline text-sm px-6 py-3 animate-erratic shadow-[0_0_20px_rgba(0,255,204,0.5)] uppercase tracking-widest">
+    動くな。解析中...
+  </div>
+</div>
+
+<!-- 離脱阻止モーダル -->
+<div id="exit-modal" class="hidden fixed inset-0 z-[998] flex items-center justify-center bg-black/80 backdrop-blur-sm">
+  <div class="bg-surface-container border-4 border-primary p-8 max-w-sm text-center shadow-[0_0_40px_rgba(255,45,120,0.6)]">
+    <p class="text-primary font-headline font-black text-2xl uppercase mb-4 animate-erratic">逃げるな</p>
+    <p class="text-on-surface-variant text-xs uppercase mb-6">あなたのデータはまだ完全には収集されていません。</p>
+    <button onclick="document.getElementById('exit-modal').classList.add('hidden')" class="px-8 py-3 border-2 border-secondary text-secondary font-headline uppercase hover:bg-secondary hover:text-black transition-all">諦めて留まる</button>
+  </div>
+</div>
+
+<!-- 3回押し警告モーダル -->
+<div id="spam-modal" class="hidden fixed inset-0 z-[997] flex items-center justify-center bg-black/70">
+  <div class="bg-error-container border-4 border-error p-6 max-w-xs text-center">
+    <p class="text-error font-headline font-black text-xl uppercase mb-2">それ以上押すな</p>
+    <p class="text-on-error-container text-[10px] uppercase mb-4">過剰なインタラクションを検出。魂に課金します。</p>
+    <button onclick="document.getElementById('spam-modal').classList.add('hidden')" class="px-6 py-2 bg-error text-black font-headline uppercase text-xs">了解</button>
+  </div>
+</div>
+
+<script>
+// ① 滞在時間タイマー
+let seconds = 0;
+setInterval(() => {
+  seconds++;
+  const el = document.getElementById('timer-display');
+  if (el) el.textContent = `あなたは${seconds}秒間監視されています`;
+}, 1000);
+
+// ② スクロール量カウント
+window.addEventListener('scroll', () => {
+  const el = document.getElementById('scroll-display');
+  if (el) el.textContent = `データ提供量: ${Math.round(window.scrollY)}px`;
+});
+
+// ③ マウス停止検知（2秒）
+let mouseTimer = null;
+let mouseStopModal = document.getElementById('mouse-stop-modal');
+document.addEventListener('mousemove', () => {
+  mouseStopModal.classList.add('hidden');
+  clearTimeout(mouseTimer);
+  mouseTimer = setTimeout(() => {
+    mouseStopModal.classList.remove('hidden');
+    setTimeout(() => mouseStopModal.classList.add('hidden'), 2000);
+  }, 2000);
+});
+
+// ④ 離脱阻止（マウスがウィンドウ外に出た瞬間）
+let exitShown = false;
+document.addEventListener('mouseleave', (e) => {
+  if (e.clientY <= 0 && !exitShown) {
+    exitShown = true;
+    document.getElementById('exit-modal').classList.remove('hidden');
+    setTimeout(() => { exitShown = false; }, 10000);
+  }
+});
+
+// ⑤ 罪の告白リアルタイム文字化け＋ミラー表示
+const glitchMap = {
+  'あ':'@','い':'1','う':'∪','え':'∃','お':'0','か':'K','き':'#','く':'<','け':'卜','こ':'⊃',
+  'さ':'∫','し':'し̴','す':'∫','せ':'∉','そ':'∋','た':'†','ち':'χ','つ':'⊂','て':'τ','と':'⊤',
+  'な':'∩','に':'∧','ぬ':'∞','ね':'ℜ','の':'∅','は':'π','ひ':'⊥','ふ':'Φ','へ':'∧','ほ':'Ψ',
+  'ま':'m̴','み':'ɯ','む':'m','め':'ɱ','も':'ɰ','や':'Υ','ゆ':'γ','よ':'ψ',
+  'ら':'я','り':'ɹ','る':'я̴','れ':'ɾ','ろ':'ʀ','わ':'ω','を':'∞','ん':'ŋ',
+  'a':'@','e':'3','i':'1','o':'0','s':'$','t':'+','g':'9','b':'8',
+  ' ':'_','。':'[END]','、':'|'
+};
+const confessionInput = document.getElementById('confession-input');
+const confessionMirror = document.getElementById('confession-mirror');
+if (confessionInput) {
+  confessionInput.addEventListener('input', () => {
+    const raw = confessionInput.value;
+    let glitched = '';
+    for (let ch of raw) {
+      glitched += glitchMap[ch] || (Math.random() < 0.1 ? '̴' + ch : ch);
+    }
+    confessionInput.value = glitched;
+    if (confessionMirror) confessionMirror.textContent = `[傍受済] ${glitched}`;
+  });
+}
+
+// ⑥ マイナンバー欄 フェイクプログレスバー
+const mynumberInput = document.getElementById('mynumber-input');
+const mynumberProgress = document.getElementById('mynumber-progress');
+const mynumberBar = document.getElementById('mynumber-bar');
+if (mynumberInput) {
+  mynumberInput.addEventListener('input', () => {
+    mynumberProgress.classList.remove('hidden');
+    let w = Math.min(mynumberInput.value.length * 8, 100);
+    mynumberBar.style.width = w + '%';
+    if (w >= 100) {
+      mynumberBar.style.backgroundColor = '#ff2d78';
+    }
+  });
+}
+
+// ⑦ DNAシーケンス記録
+let dnaSeq = '';
+const dnaDisplay = document.getElementById('dna-sequence-display');
+const dnaSpan = document.getElementById('dna-sequence');
+['a','t','c','g'].forEach(base => {
+  const btn = document.getElementById('dna-' + base);
+  if (btn) {
+    btn.addEventListener('click', () => {
+      dnaSeq += base.toUpperCase();
+      if (dnaSpan) dnaSpan.textContent = dnaSeq;
+      if (dnaDisplay) dnaDisplay.classList.remove('hidden');
+    });
+  }
+});
+
+// ⑧ 3回押し警告（送信ボタン）
+let submitCount = 0;
+const submitBtn = document.querySelector('button[type="submit"]');
+if (submitBtn) {
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    submitCount++;
+    if (submitCount >= 3) {
+      document.getElementById('spam-modal').classList.remove('hidden');
+      submitCount = 0;
+    }
+  });
+}
+</script>
 </body></html>
