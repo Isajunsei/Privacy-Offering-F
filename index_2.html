@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>USER HOSTILE - LEAVE NOW</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;700;800&amp;family=Inter:wght@400;700&amp;family=Space+Grotesk:wght@400;700&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#8c0038",
+              "surface-tint": "#ff2d78",
+              "background": "#0a0a12",
+              "tertiary-container": "#665200",
+              "surface-variant": "#1e1e30",
+              "on-tertiary-fixed-variant": "#665200",
+              "primary": "#ff2d78",
+              "primary-fixed": "#ffe0ec",
+              "on-error": "#1a0000",
+              "on-primary-container": "#ffe0ec",
+              "on-tertiary-fixed": "#1a1000",
+              "inverse-on-surface": "#0a0a12",
+              "surface-container-low": "#111118",
+              "on-surface-variant": "#a098b0",
+              "on-secondary-fixed-variant": "#004d4d",
+              "on-error-container": "#ffa0a0",
+              "surface-container": "#141422",
+              "error-container": "#3d0f0f",
+              "surface": "#0f0f1a",
+              "outline": "#5a5068",
+              "secondary": "#00ffcc",
+              "on-background": "#e8e0f0",
+              "secondary-fixed": "#c0fff4",
+              "surface-bright": "#1a1a2e",
+              "outline-variant": "#302840",
+              "on-surface": "#e8e0f0",
+              "surface-container-highest": "#28283e",
+              "on-primary-fixed-variant": "#8c0038",
+              "primary-fixed-dim": "#ff80aa",
+              "surface-container-lowest": "#0a0a12",
+              "tertiary-fixed": "#fff0c0",
+              "on-secondary-fixed": "#001a1a",
+              "on-secondary-container": "#c0fff4",
+              "surface-dim": "#0f0f1a",
+              "on-secondary": "#001a1a",
+              "on-primary": "#1a0010",
+              "on-tertiary": "#1a1000",
+              "secondary-container": "#004d3d",
+              "tertiary-fixed-dim": "#ffe04a",
+              "tertiary": "#ffe04a",
+              "secondary-fixed-dim": "#00e6b8",
+              "error": "#ff4444",
+              "surface-container-high": "#1e1e30",
+              "primary-container": "#b3004e",
+              "on-tertiary-container": "#fff0c0",
+              "inverse-surface": "#e8e0f0",
+              "on-primary-fixed": "#3d0020"
+            },
+            fontFamily: {
+              "headline": ["Sora"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        @keyframes strobe {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        .animate-strobe {
+            animation: strobe 0.15s infinite;
+        }
+        .scanlines {
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.2) 51%);
+            background-size: 100% 4px;
+        }
+
+        /* Nano Banana Pro Animations */
+        @keyframes cyber-float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        @keyframes cyber-pulse {
+            0%, 100% { filter: brightness(1) blur(0px); opacity: 0.8; }
+            50% { filter: brightness(1.8) blur(1px); opacity: 1; }
+        }
+        @keyframes cyber-jitter {
+            0% { transform: translate(0,0); }
+            10% { transform: translate(-2px, 1px); }
+            20% { transform: translate(2px, -1px); }
+            30% { transform: translate(-1px, 2px); }
+            40% { transform: translate(1px, -2px); }
+            100% { transform: translate(0,0); }
+        }
+
+        /* Spiritual Phenomena Effects */
+        @keyframes ghost-fade {
+            0%, 100% { opacity: 0; transform: scale(0.9); }
+            50% { opacity: 0.25; transform: scale(1.1); }
+        }
+        @keyframes shadow-creep {
+            0% { transform: translateX(-100%) scaleY(1); opacity: 0; }
+            50% { opacity: 0.4; }
+            100% { transform: translateX(0) scaleY(1.2); opacity: 0.6; }
+        }
+        @keyframes glitch-eye {
+            0%, 88%, 92%, 100% { opacity: 0; transform: scale(0); }
+            90% { opacity: 0.8; transform: scale(1.2) skewX(20deg); }
+        }
+        @keyframes fruit-distort {
+            0%, 95% { filter: none; transform: scale(1); }
+            97% { filter: hue-rotate(90deg) contrast(200%) blur(2px); transform: scale(1.1) skewY(5deg); }
+            98% { filter: invert(1) contrast(500%); transform: scale(0.9) skewX(-5deg); }
+            100% { filter: none; transform: scale(1); }
+        }
+
+        .ghost-silhouette {
+            animation: ghost-fade 8s infinite;
+            filter: blur(15px) grayscale(1);
+        }
+        .shadow-hands {
+            animation: shadow-creep 15s infinite alternate ease-in-out;
+        }
+        .creepy-eye {
+            animation: glitch-eye 4s infinite;
+        }
+        .distort-active {
+            animation: fruit-distort 10s infinite;
+        }
+
+        .nano-fruit {
+            position: fixed;
+            pointer-events: none;
+            z-index: 40;
+            width: 220px;
+            height: 220px;
+            mix-blend-mode: screen;
+            animation: cyber-float 6s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+
+        .nano-fruit img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .glow-pink { filter: drop-shadow(0 0 15px #ff2d78); }
+        .glow-cyan { filter: drop-shadow(0 0 15px #00ffcc); }
+        .glow-yellow { filter: drop-shadow(0 0 15px #ffe04a); }
+        
+        .pulse-fast { animation: cyber-pulse 2s infinite ease-in-out; }
+        .jitter-active { animation: cyber-jitter 0.1s infinite; }
+    
+        @keyframes glitch-shiver {
+            0% { transform: translate(0,0) scale(1); }
+            10% { transform: translate(-5px, -2px) scale(1.02); }
+            20% { transform: translate(4px, 1px) scale(0.98); }
+            30% { transform: translate(-2px, 5px) scale(1.01); }
+            40% { transform: translate(3px, -4px) scale(0.99); }
+            50% { transform: translate(-4px, 2px) scale(1.03); }
+            60% { transform: translate(5px, -1px) scale(0.97); }
+            70% { transform: translate(-1px, -5px) scale(1.02); }
+            80% { transform: translate(2px, 4px) scale(0.98); }
+            90% { transform: translate(-3px, -2px) scale(1.01); }
+            100% { transform: translate(0,0) scale(1); }
+        }
+        .animate-glitch-shiver {
+            animation: glitch-shiver 0.2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Spiritual Background Layers (IMAGE_29 Overlay) -->
+<div class="fixed inset-0 pointer-events-none z-0 bg-[#050508]">
+<!-- Ghost Silhouettes -->
+<div class="absolute top-[20%] left-[30%] w-64 h-96 ghost-silhouette bg-gradient-to-b from-white/20 to-transparent rounded-full" style="animation-delay: 2s;"></div>
+<div class="absolute bottom-[10%] right-[25%] w-80 h-80 ghost-silhouette bg-gradient-to-t from-white/10 to-transparent rounded-full" style="animation-delay: 5s;"></div>
+<!-- Creeping Shadows -->
+<div class="absolute top-0 bottom-0 left-0 w-32 shadow-hands bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+<div class="absolute top-0 bottom-0 right-0 w-32 shadow-hands bg-gradient-to-l from-black via-black/80 to-transparent" style="animation-direction: alternate-reverse;"></div>
+<!-- Glitch Eyes -->
+<div class="absolute top-[40%] left-[15%] creepy-eye">
+<div class="w-16 h-8 bg-white rounded-full flex items-center justify-center border-4 border-red-600">
+<div class="w-6 h-6 bg-black rounded-full"></div>
+</div>
+</div>
+<div class="absolute bottom-[30%] right-[10%] creepy-eye" style="animation-delay: 1.5s;">
+<div class="w-20 h-10 bg-white rounded-full flex items-center justify-center border-4 border-red-600">
+<div class="w-8 h-8 bg-black rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Scattered Cyberpunk Fruits -->
+<div class="nano-fruit top-[10%] left-[2%] glow-pink pulse-fast distort-active">
+<img alt="Cyber Apple" class="" src="./assets/apple.png" style="">
+</div>
+<div class="nano-fruit top-[55%] left-[-2%] glow-cyan distort-active" style="animation-delay: -1.5s;">
+<img alt="Cyber Grapes" class="jitter-active opacity-60" src="./assets/grapes.png" style="">
+</div>
+<div class="nano-fruit top-[5%] right-[2%] glow-yellow distort-active" style="animation-delay: -3s;">
+<img alt="Cyber Mango" class="" src="./assets/mango.png" style="">
+</div>
+<div class="nano-fruit bottom-[5%] right-[2%] glow-cyan pulse-fast distort-active" style="animation-delay: -4.5s;">
+<img alt="Cyber Pineapple" class="" src="./assets/pineapple.png" style="">
+</div>
+<div class="nano-fruit top-[35%] right-[15%] scale-50 opacity-30 glow-pink" style="animation-duration: 8s;">
+<img alt="Cyber Apple Small" class="" src="./assets/apple.png" style="">
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full rotate-1 bg-yellow-400 dark:bg-lime-500 border-8 border-double border-red-600 shadow-[10px_10px_0px_rgba(255,45,120,1)] z-[100] transition-all duration-75 ease-in-out active:rotate-180 flex justify-between items-center px-2 py-8">
+<div class="text-3xl italic font-black text-blue-600 animate-bounce font-headline" style="">Error_Bug</div>
+<nav class="hidden md:flex gap-4">
+<a class="bg-black text-white line-through px-4 py-2 font-headline uppercase Sora hover:skew-x-12 hover:scale-150 hover:bg-white transition-all" href="#" style="">今すぐ魂を売れ</a>
+<a class="text-green-600 underline decoration-wavy px-4 py-2 font-headline uppercase Sora hover:skew-x-12 hover:scale-150 hover:bg-white transition-all" href="#" style=""><br></a>
+<a class="text-green-600 underline decoration-wavy px-4 py-2 font-headline uppercase Sora hover:skew-x-12 hover:scale-150 hover:bg-white transition-all" href="#" style=""><br></a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="bg-white p-1 border-4 border-black">
+<input class="bg-black text-primary border-none text-xs placeholder:text-red-500 w-40" placeholder="検索は許可されていません" type="text">
+</div>
+<button class="bg-primary text-on-primary font-black uppercase Sora p-4 border-4 border-white animate-pulse" style="">無駄な抵抗</button>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-20 h-full w-12 hover:w-64 transition-all bg-gradient-to-b from-red-600 via-pink-500 to-yellow-400 border-r-4 border-dashed border-white drop-shadow-[0_0_15px_rgba(0,255,204,1)] z-50 flex flex-col gap-10 p-4 group overflow-hidden">
+<div class="text-xs text-white uppercase font-black Sora mb-4 group-hover:block hidden" style="">敵対的ユーザー
+        <span class="block text-[8px] opacity-75" style="">今すぐ立ち去れ</span></div>
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-4 bg-white text-black font-extrabold scale-110 p-2 animate-pulse">
+<span class="material-symbols-outlined" data-icon="warning" style="">warning</span>
+<span class="font-black text-xs Sora hidden group-hover:inline" style="">ホーム？</span>
+</div>
+<div class="flex items-center gap-4 text-black opacity-50 blur-[1px] hover:invert hover:cursor-help transition-all">
+<span class="material-symbols-outlined" data-icon="dangerous" style="">dangerous</span>
+<span class="font-black text-xs Sora hidden group-hover:inline" style="">広告</span>
+</div>
+<div class="flex items-center gap-4 text-black opacity-50 blur-[1px] hover:invert hover:cursor-help transition-all">
+<span class="material-symbols-outlined" data-icon="error" style="">error</span>
+<span class="font-black text-xs Sora hidden group-hover:inline" style="">迷惑メール</span>
+</div>
+<div class="flex items-center gap-4 text-black opacity-50 blur-[1px] hover:invert hover:cursor-help transition-all">
+<span class="material-symbols-outlined" data-icon="skull" style="font-variation-settings: &quot;FILL&quot; 1;">skull</span>
+<span class="font-black text-xs Sora hidden group-hover:inline" style="">ウイルス</span>
+</div>
+<div class="flex items-center gap-4 text-black opacity-50 blur-[1px] hover:invert hover:cursor-help transition-all">
+<span class="material-symbols-outlined" data-icon="cancel" style="">cancel</span>
+<span class="font-black text-xs Sora hidden group-hover:inline" style="">終了</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-48 pb-32 px-4 md:ml-16 relative z-10">
+<!-- Background Chaos -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-20 scanlines"></div>
+<div class="absolute top-20 right-0 w-96 h-96 bg-primary rounded-full blur-[150px] animate-pulse opacity-40"></div>
+<div class="absolute bottom-0 left-20 w-80 h-80 bg-secondary rounded-full blur-[120px] animate-strobe opacity-30"></div>
+<!-- Hero Section -->
+<section class="max-w-6xl mx-auto grid grid-cols-12 gap-0 border-4 border-primary p-4 bg-surface/80 backdrop-blur-md relative overflow-visible">
+<div class="col-span-12 md:col-span-8 p-8 border-r-4 border-primary flex flex-col justify-center gap-6">
+<h1 class="text-7xl font-black font-headline text-secondary uppercase leading-none tracking-tighter mix-blend-difference" style="">貴様のデータは<br>全て<span class="text-primary italic animate-strobe" style="">我々のもの</span>だ</h1>
+<p class="font-label text-xl bg-primary text-on-primary p-4 -rotate-2 w-fit" style="">どこをクリックしても、すべてのCookie、ウイルス、および法的責任に同意したものとみなされます。</p>
+<div class="flex gap-4 mt-8">
+<button class="bg-black border-2 border-secondary text-secondary p-8 font-black text-2xl hover:bg-secondary hover:text-black transition-all rotate-3" onclick="document.getElementById('disturbing-popup').classList.remove('hidden')" style="">Don't&nbsp;Click</button>
+<button class="bg-transparent border-4 border-dashed border-error text-error p-8 font-black text-2xl hover:translate-y-20 transition-all" style="">解約は不可能</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 bg-tertiary relative h-96 md:h-auto overflow-hidden">
+<img alt="Glitchy server hardware" class="absolute inset-0 w-full h-full object-cover grayscale brightness-200 contrast-200 mix-blend-multiply opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMjWdMsTaU3A1oi8JNYlEomL8EFDI2kJi2wgiXW65IRUxKCjmdc9c8NuzaBy-9spHUW8ZswV0eHa8zph3YnTNd1nyJBzMUqpBEriO5DGvXxt95L_hfy3JQWFu2ToT5P1pq9dDafcKbiWz6s9B_pfynncZPHbA5LxSP_2mPDMugBa5lO7jZmCDC4-qy0bQglnmJLCNwAyTJJw5JiGIyzm3miF8dECsVTd3Tbv3iEKTN8RCbmE9yTsz7yCyHaEy6cGKOPwjYV8YlBOzX" style="">
+<div class="absolute inset-0 flex items-center justify-center p-4">
+<div class="bg-black text-white p-2 font-mono text-[10px] animate-strobe border-2 border-white" style="">致命的なエラー：成功を検出しました</div>
+</div>
+</div>
+<!-- Floating Pop-up -->
+<div class="absolute -top-10 -right-10 w-64 bg-surface-variant border-4 border-secondary p-4 shadow-[15px_15px_0px_#00ffcc] z-50 animate-bounce">
+<div class="flex justify-between items-center mb-2 bg-secondary text-black p-1">
+<span class="text-[10px] font-black" style="">当選！！！</span>
+<button class="bg-black text-white text-[8px] px-1" style="">X</button>
+</div>
+<p class="text-xs text-on-surface mb-2" style="">あなたは1,000,000,000番目の訪問者です！</p>
+<button class="w-full bg-primary text-on-primary font-black py-2 hover:scale-110 transition-transform" style="">負債を背負う</button>
+</div>
+</section>
+<!-- Bento Chaos Grid -->
+<section class="max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-2 bg-surface-container/90 border border-primary/30 p-10 relative overflow-hidden group backdrop-blur-md">
+<div class="absolute -top-4 -left-4 text-9xl text-primary/10 font-black pointer-events-none" style="">01</div>
+<h3 class="text-3xl font-headline font-bold text-primary mb-4" style="">安全でないプロトコル</h3>
+<p class="text-secondary font-label mb-6" style="">あなたのプライバシーはビッグバイトによって作られた幻想です。マウスカーソルを通してあなたの眼球運動を追跡しています。</p>
+<div class="w-full h-40 bg-black border border-outline-variant flex items-center justify-center relative overflow-hidden">
+<img alt="bg apple" class="absolute inset-0 w-full h-full object-contain mix-blend-screen opacity-40 blur-[2px] scale-150 distort-active" src="./assets/apple.png" style="">
+<span class="material-symbols-outlined text-6xl text-error animate-pulse relative z-10" data-icon="lock_open" style="">lock_open</span>
+</div>
+<div class="absolute inset-0 border-4 border-secondary opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<div class="bg-tertiary-container border-4 border-black p-6 flex flex-col items-center justify-center text-center relative overflow-hidden">
+<img alt="bg mango" class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-20 distort-active" src="./assets/mango.png" style="">
+<span class="material-symbols-outlined text-5xl text-tertiary mb-4 relative z-10" data-icon="rocket_launch" style="font-variation-settings: &quot;FILL&quot; 1;">rocket_launch</span>
+<h4 class="font-headline font-black text-black relative z-10" style="">スローモード</h4>
+<p class="text-[10px] text-black/70 relative z-10" style="">これをクリックすると、「安定性」のためにCPUを手動で低速化します。</p>
+<input class="w-full mt-4 accent-black relative z-10" type="range" placeholder="9">
+</div>
+<div class="bg-surface-container-highest/90 border-b-8 border-primary p-6 rotate-6 backdrop-blur-md relative overflow-hidden">
+<img alt="bg small mango" class="absolute -right-10 -bottom-10 w-32 h-32 object-contain mix-blend-screen opacity-50 jitter-active distort-active" src="./assets/mango.png" style="">
+<h4 class="text-primary font-black Sora mb-2 relative z-10" style="">フィードバック</h4>
+<textarea class="w-full h-32 bg-black text-secondary border-secondary p-2 text-xs relative z-10" placeholder="なぜ我々を憎んでいるのか教えてください"></textarea>
+<button class="mt-2 w-full bg-secondary text-on-secondary font-black p-2 hover:bg-white hover:text-black relative z-10" style="">虚無に送信</button>
+</div>
+<div class="md:col-span-4 bg-surface/90 p-12 border-x-8 border-secondary flex flex-col md:flex-row items-center gap-10 backdrop-blur-md relative overflow-hidden">
+<img alt="bg glow apple" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] object-contain mix-blend-screen opacity-10 blur-xl distort-active" src="./assets/apple.png" style="">
+<div class="flex-1 relative z-10">
+<h2 class="text-5xl font-headline font-black text-on-surface uppercase mb-4" style=""><span class="text-secondary line-through" style="">カルト</span>教団の回覧板を購読せよ</h2>
+<p class="text-on-surface-variant max-w-md" style="">1日に500通のメールを送信します。購読解除リンクは存在しません。</p>
+</div>
+<div class="flex flex-col gap-2 w-full md:w-auto relative z-10">
+<input class="bg-black border-2 border-primary text-primary p-4 font-headline" placeholder="あなたの魂@SOUL.COM" type="email">
+<button class="bg-primary text-on-primary p-4 font-black uppercase Sora hover:invert transition-all" style="">諦める</button>
+</div>
+</div>
+</section>
+<!-- Nonsense List -->
+<section class="max-w-4xl mx-auto mt-20 text-center">
+<h2 class="text-9xl font-black opacity-10 uppercase absolute left-0 w-full overflow-hidden whitespace-nowrap" style="">システム障害 システム障害 システム障害</h2>
+<div class="relative z-10 p-10 bg-black/80 backdrop-blur-md border border-white/10">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-10">
+<div class="p-4 hover:scale-125 transition-transform bg-surface-container-low border border-outline relative overflow-hidden">
+<img alt="icon mango" class="absolute inset-0 w-full h-full object-contain mix-blend-screen opacity-30 distort-active" src="./assets/mango.png" style="">
+<span class="material-symbols-outlined text-primary mb-2 relative z-10" data-icon="bug_report" style="">bug_report</span>
+<div class="text-xs font-black Sora text-secondary relative z-10" style="">毒虫報告</div>
+</div>
+<div class="p-4 hover:scale-125 transition-transform bg-surface-container-low border border-outline relative overflow-hidden">
+<img alt="icon apple" class="absolute inset-0 w-full h-full object-contain mix-blend-screen opacity-30 distort-active" src="./assets/apple.png" style="">
+<span class="material-symbols-outlined text-primary mb-2 relative z-10" data-icon="skull" style="">skull</span>
+<div class="text-xs font-black Sora text-secondary relative z-10" style="">自我削除</div>
+</div>
+<div class="p-4 hover:scale-125 transition-transform bg-surface-container-low border border-outline relative overflow-hidden">
+<img alt="icon grape" class="absolute inset-0 w-full h-full object-contain mix-blend-screen opacity-30 distort-active" src="./assets/grapes.png" style="">
+<span class="material-symbols-outlined text-primary mb-2 relative z-10" data-icon="visibility_off" style="">visibility_off</span>
+<div class="text-xs font-black Sora text-secondary relative z-10" style="">全てを隠蔽</div>
+</div>
+<div class="p-4 hover:scale-125 transition-transform bg-surface-container-low border border-outline">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="priority_high" style="">priority_high</span>
+<div class="text-xs font-black Sora text-secondary" style="">狂乱開始</div>
+</div>
+<div class="p-4 hover:scale-125 transition-transform bg-surface-container-low border border-outline">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="cloud_off" style="">cloud_off</span>
+<div class="text-xs font-black Sora text-secondary" style="">外界遮断</div>
+</div>
+<div class="p-4 hover:scale-125 transition-transform bg-surface-container-low border border-outline relative overflow-hidden">
+<img alt="icon pine" class="absolute inset-0 w-full h-full object-contain mix-blend-screen opacity-30 distort-active" src="./assets/pineapple.png" style="">
+<span class="material-symbols-outlined text-primary mb-2 relative z-10" data-icon="settings_suggest" style="">settings_suggest</span>
+<div class="text-xs font-black Sora text-secondary relative z-10" style="">混沌の再編</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full absolute bottom-[-50px] hover:bottom-0 transition-all bg-blue-900 border-t-2 border-primary flex flex-col items-center p-20 z-[200]">
+<div class="font-mono text-[8px] text-lime-400 mb-8 uppercase tracking-widest" style="">(C) 1994 ジオシティーズのゴミ - 複製禁止</div>
+<div class="flex gap-10">
+<a class="font-mono text-[8px] text-red-500 hover:text-white hover:tracking-[1em] transition-all" href="#" style="">苦悩の規約</a>
+<a class="font-mono text-[8px] text-red-500 hover:text-white hover:tracking-[1em] transition-all" href="#" style="">プライバシー？（笑）</a>
+</div>
+<div class="mt-8 relative">
+<img alt="footer fruit" class="absolute -left-16 top-0 h-10 w-10 object-contain mix-blend-screen glow-cyan distort-active" src="./assets/grapes.png" style="">
+<img alt="Web 1.0 button" class="h-8 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgLTbOUyOU5j5VWyoweSA0hnpL_LdAg0UrYDGTk7S6ruQiCS0SLIjVhKM-89arobNKeqwutPxF6XnU3e6tCLHtECmvP5XpjZ9Pkc8KJKDwYA0X7Z7RaPFuiIUwY-vU9xGP8nn3mATEqc95Gy3oLB5xHVtMtWjvXP6PlW6pHjVt0WqoYRWc9VwJxVeknLLp1mru2vkp3a6aegKuuSwkyqLRW_nH4ONDSdxmuD_YhbFas3Ohp05MDzcshnv25d4j1LtL227-xEbZImKb" style="">
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full bg-surface-container-highest flex justify-around p-4 border-t-4 border-primary z-[300]">
+<span class="material-symbols-outlined text-primary" data-icon="warning" style="">warning</span>
+<span class="material-symbols-outlined text-secondary" data-icon="skull" style="">skull</span>
+<span class="material-symbols-outlined text-tertiary" data-icon="error" style="">error</span>
+</nav>
+<div class="fixed inset-0 z-[1000] flex items-center justify-center bg-black/90 backdrop-blur-xl hidden" id="disturbing-popup">
+<div class="relative w-full max-w-md p-1 bg-primary animate-glitch-shiver cursor-pointer" onclick="document.getElementById('disturbing-popup').classList.add('hidden')">
+<div class="bg-background p-8 border-4 border-double border-secondary flex flex-col items-center gap-6 text-center">
+<button class="absolute top-2 right-2 text-primary font-black text-2xl hover:scale-150 transition-transform" style="">X</button>
+<h2 class="text-5xl font-black font-headline text-primary tracking-tighter" style="">手遅れです</h2>
+<p class="text-2xl font-black font-headline text-secondary animate-pulse" style="">YOU ARE WATCHED</p>
+<p class="text-xs font-mono text-primary/50 uppercase tracking-[0.5em]" style="">There is no escape from the loop</p>
+<div class="w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<p class="text-sm italic text-on-background" style="">監視は既に完了しました。あなたのデータは整理されています。</p>
+</div>
+</div>
+</div>
+</body></html>
